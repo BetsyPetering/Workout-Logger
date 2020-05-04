@@ -1,8 +1,8 @@
 // get all workout data from back-end
 
-fetch("/api/workouts/range")
-  .then(response => {
-    return response.json();
+fetch("/api/workouts/range")  //called fro api.js ln 39
+  .then(response => {       // what "data" is sent??
+    return response.json(); //populateChart(data) - what data?
   })
   .then(data => {
     populateChart(data);
