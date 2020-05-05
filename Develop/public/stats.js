@@ -1,8 +1,8 @@
 // get all workout data from back-end
 
-fetch("/api/workouts/range")  //called fro api.js ln 39
-  .then(response => {       // what "data" is sent??
-    return response.json(); //populateChart(data) - what data?
+fetch("/api/workouts/range")
+  .then(response => {
+    return response.json();
   })
   .then(data => {
     populateChart(data);
@@ -189,7 +189,8 @@ function populateChart(data) {
 function duration(data) {
   let durations = [];
 
-  data.forEach(workout => {
+  data.forEach(workout => {  
+    console.log(workout);
     workout.exercises.forEach(exercise => {
       durations.push(exercise.duration);
     });
